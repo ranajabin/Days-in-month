@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Get number of days in a specified month
+    </title>
+</head>
+
+<body style="text-align:center; background-color: aqua;">
+
+    <h1 style="color:blue;">
+        Number of days in any Month
+    </h1>
+
+    <p id="para" style="font-size: 15px; font-weight: bold;">
+    </p>
+
+    <button onclick="Count()">
+        click here
+    </button>
+
+    <p id="para2" style="color:rgb(128, 0, 32); font-size: 20px; font-weight: bold;">
+    </p>
+
+    <script>
+       
+        var upperpara = document.getElementById('para').innerHTML = "Click on button to get the number of days in specified month."
+
+        var downpara = document.getElementById('para2');
+
+        function daysInMonth(month, year) {
+            return new Date(year, month, 0).getDate();
+        }
+
+        function Count() {
+
+            var month = parseInt(prompt("Enter Month in digit:"));
+            var year = parseInt(prompt("Enter Year in a digit: "));
+            //   var month = 2;
+            //   var year = 2020;
+            downpara.innerHTML = "Number of days in " + month
+                + " month of the year " + year
+                + " is " + daysInMonth(month, year) + ".";
+        }
+    </script>
+</body>
+
+</html>
